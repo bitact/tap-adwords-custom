@@ -1,0 +1,257 @@
+{
+   "streams": [
+      {
+         "stream": "ADGROUP_PERFORMANCE_REPORT",
+         "tap_stream_id": "ADGROUP_PERFORMANCE_REPORT_NEW",
+         "metadata": [
+            {
+               "breadcrumb": [],
+               "metadata": {
+                  "inclusion": "available",
+                  "selected": true,
+                  "conversion_window_days": "0"
+               }
+            },
+            {
+               "breadcrumb": [
+                  "properties",
+                  "currency"
+               ],
+               "metadata": {
+                  "fieldExclusions": [],
+                  "behavior": "ATTRIBUTE",
+                  "adwords.fieldName": "AccountCurrencyCode",
+                  "inclusion": "available",
+                  "selected": true
+               }
+            },
+            {
+               "breadcrumb": [
+                  "properties",
+                  "account"
+               ],
+               "metadata": {
+                  "fieldExclusions": [],
+                  "behavior": "ATTRIBUTE",
+                  "adwords.fieldName": "AccountDescriptiveName",
+                  "inclusion": "available",
+                  "selected": true
+               }
+            },
+            {
+               "breadcrumb": [
+                  "properties",
+                  "adGroupID"
+               ],
+               "metadata": {
+                  "fieldExclusions": [],
+                  "behavior": "ATTRIBUTE",
+                  "adwords.fieldName": "AdGroupId",
+                  "inclusion": "available",
+                  "selected": true
+               }
+            },
+            {
+               "breadcrumb": [
+                  "properties",
+                  "campaignID"
+               ],
+               "metadata": {
+                  "fieldExclusions": [],
+                  "behavior": "ATTRIBUTE",
+                  "adwords.fieldName": "CampaignId",
+                  "inclusion": "available",
+                  "selected": true
+               }
+            },
+            {
+               "breadcrumb": [
+                  "properties",
+                  "cost"
+               ],
+               "metadata": {
+                  "fieldExclusions": [
+                     [
+                        "properties",
+                        "conversionAdjustment"
+                     ],
+                     [
+                        "properties",
+                        "daysToConversionOrAdjustment"
+                     ],
+                     [
+                        "properties",
+                        "conversionCategory"
+                     ],
+                     [
+                        "properties",
+                        "daysToConversion"
+                     ],
+                     [
+                        "properties",
+                        "conversionTrackerId"
+                     ],
+                     [
+                        "properties",
+                        "conversionName"
+                     ],
+                     [
+                        "properties",
+                        "conversionSource"
+                     ]
+                  ],
+                  "behavior": "METRIC",
+                  "adwords.fieldName": "Cost",
+                  "inclusion": "available",
+                  "selected": true
+               }
+            },
+            {
+               "breadcrumb": [
+                  "properties",
+                  "day"
+               ],
+               "metadata": {
+                  "fieldExclusions": [],
+                  "behavior": "SEGMENT",
+                  "adwords.fieldName": "Date",
+                  "inclusion": "automatic"
+               }
+            },
+            {
+               "breadcrumb": [
+                  "properties",
+                  "device"
+               ],
+               "metadata": {
+                  "fieldExclusions": [
+                     [
+                        "properties",
+                        "pagesSession"
+                     ],
+                     [
+                        "properties",
+                        "avgSessionDurationSeconds"
+                     ],
+                     [
+                        "properties",
+                        "bounceRate"
+                     ],
+                     [
+                        "properties",
+                        "clickAssistedConvValue"
+                     ],
+                     [
+                        "properties",
+                        "clickAssistedConv"
+                     ],
+                     [
+                        "properties",
+                        "clickAssistedConvLastClickConv"
+                     ],
+                     [
+                        "properties",
+                        "imprAssistedConvValue"
+                     ],
+                     [
+                        "properties",
+                        "imprAssistedConv"
+                     ],
+                     [
+                        "properties",
+                        "imprAssistedConvLastClickConv"
+                     ],
+                     [
+                        "properties",
+                        "phoneImpressions"
+                     ],
+                     [
+                        "properties",
+                        "phoneCalls"
+                     ],
+                     [
+                        "properties",
+                        "ptr"
+                     ],
+                     [
+                        "properties",
+                        "newSessions"
+                     ],
+                     [
+                        "properties",
+                        "relativeCTR"
+                     ]
+                  ],
+                  "behavior": "SEGMENT",
+                  "adwords.fieldName": "Device",
+                  "inclusion": "available",
+                  "selected": true
+               }
+            }
+         ],
+         "schema": {
+            "type": "object",
+            "is_report": "true",
+            "properties": {
+               "currency": {
+                  "description": "Currency",
+                  "type": [
+                     "null",
+                     "string"
+                  ]
+               },
+               "account": {
+                  "description": "Account",
+                  "type": [
+                     "null",
+                     "string"
+                  ]
+               },
+               "adGroupID": {
+                  "description": "Ad group ID",
+                  "type": [
+                     "null",
+                     "integer"
+                  ]
+               },
+               "campaignID": {
+                  "description": "Campaign ID",
+                  "type": [
+                     "null",
+                     "integer"
+                  ]
+               },
+               "cost": {
+                  "description": "Cost",
+                  "type": [
+                     "null",
+                     "integer",
+                     "string"
+                  ]
+               },
+               "day": {
+                  "description": "Day",
+                  "type": [
+                     "null",
+                     "string"
+                  ],
+                  "format": "date-time"
+               },
+               "device": {
+                  "description": "Device",
+                  "type": [
+                     "null",
+                     "string"
+                  ]
+               }
+            }
+         },
+         "key_properties": [
+            "campaignID",
+            "adGroupID",
+            "day",
+            "device"
+         ]
+      }
+   ]
+}
